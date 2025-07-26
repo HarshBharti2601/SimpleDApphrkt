@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #2c5364 60%, #6a82fb 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Blockchain background illustration */
+.bg-illustration {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://svgshare.com/i/13eD.svg') center center/cover no-repeat;
+  opacity: 0.10;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-container {
+  max-width: 480px;
+  margin: 48px auto 24px auto;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(16, 16, 64, 0.27);
+  padding: 38px 18px 28px 18px;
+  background: rgba(34, 41, 61, 0.80);
+  backdrop-filter: blur(16px);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid rgba(170, 180, 255, 0.16);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #7fdbff;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 16px #6a82fb33;
+}
+
+.section {
+  padding: 18px 12px 16px 12px;
+  border-radius: 1.2rem;
+  background: rgba(80, 90, 150, 0.28);
+  box-shadow: 0 1px 16px 0 rgba(30,41,59,0.13);
+  margin-bottom: 0;
+  border: 1px solid rgba(122, 190, 255, 0.11);
+  backdrop-filter: blur(4px);
+  position: relative;
+}
+
+label {
+  font-weight: 600;
+  color: #aeeaff;
+  display: block;
+  margin-bottom: 4px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0 14px 0;
+  border: 1px solid #4fc3f7;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255,255,255,0.12);
+  color: #e0eaff;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+  border: 1.5px solid #7fdbff;
+}
+
+button {
+  background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+  color: #141c2c;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 18px 0 #4facfe44;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 6px;
+  margin-right: 4px;
+  letter-spacing: 0.03em;
+  text-shadow: none;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #8fd3f4 0%, #84fab0 100%);
+  color: #222b45;
+}
+
+.balance-value {
+  color: #b3ffab;
+  font-size: 1.23rem;
+  font-weight: bold;
+  margin-top: 8px;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 8px #78ffd633;
+}
+
+.icon {
+  vertical-align: middle;
+  width: 1.35em;
+  height: 1.35em;
+  margin-right: 8px;
+  margin-bottom: 2px;
+  filter: drop-shadow(0 0 7px #00f2fe88);
+}
+
+@media (max-width: 650px) {
+  .app-container {
+    max-width: 99vw;
+    padding: 12vw 2vw 8vw 2vw;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  .section {
+    padding: 8vw 2vw 6vw 2vw;
+  }
+}
